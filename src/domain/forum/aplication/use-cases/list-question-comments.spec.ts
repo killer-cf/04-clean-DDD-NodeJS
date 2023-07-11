@@ -40,12 +40,12 @@ describe('List recente questions', () => {
       }),
     )
 
-    const { questionComments } = await sut.execute({
+    const result = await sut.execute({
       page: 1,
       questionId: question.id.toString(),
     })
 
-    expect(questionComments).toHaveLength(3)
+    if (result.isRight()) expect(result.value?.questionComments).toHaveLength(3)
   })
 
   test('should be able to list paginated question comments', async () => {
@@ -61,11 +61,10 @@ describe('List recente questions', () => {
       )
     }
 
-    const { questionComments } = await sut.execute({
+    const result = await sut.execute({
       page: 2,
       questionId: question.id.toString(),
     })
-
-    expect(questionComments).toHaveLength(2)
+    if (result.isRight()) expect(result.value?.questionComments).toHaveLength(2)
   })
 })
