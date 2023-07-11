@@ -9,7 +9,7 @@ interface DeleteAnswerCommentUseCaseRequest {
 }
 
 type DeleteAnswerCommentUseCaseResponse = Either<
-  ResourceNotFoundError | ResourceNotFoundError,
+  ResourceNotFoundError | NotAllowedError,
   {}
 >
 
