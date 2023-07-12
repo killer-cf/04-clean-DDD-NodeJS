@@ -3,7 +3,7 @@ import { makeQuestion } from 'test/factories/make-question'
 import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
 import { ChooseQuestionBestAnswerUseCase } from './choose-question-best-answer'
 import { makeAnswer } from 'test/factories/make-answer'
-import { UniqueEntityId } from '@/core/types/entities/unique-entity-id'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 import { NotAllowedError } from './Errors/not-allowed-error'
 
 let inMemoryQuestionsRepository: InMemoryQuestionsRepository
