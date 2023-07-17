@@ -2,7 +2,7 @@ import { Either, left, right } from '@/core/either'
 import { AnswerComment } from '../../enterprise/entities/answer-comment'
 import { AnswerCommentsRepository } from '../repositories/answer-comments-repository'
 import { AnswersRepository } from '../repositories/answers-repository'
-import { ResourceNotFoundError } from './Errors/resource-not-found-error'
+import { ResourceNotFoundError } from '@/core/errors/resource-not-found-error'
 
 interface ListAnswerCommentsUseCaseRequest {
   answerId: string
